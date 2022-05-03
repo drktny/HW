@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\bin\Debug\WFA_HospitalAutomation.exe.config
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\bin\Debug\WFA_HospitalAutomation.exe
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\bin\Debug\WFA_HospitalAutomation.pdb
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\obj\Debug\WFA_HospitalAutomation.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\obj\Debug\WFA_HospitalAutomation.Form1.resources
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\obj\Debug\WFA_HospitalAutomation.Properties.Resources.resources
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\obj\Debug\WFA_HospitalAutomation.csproj.GenerateResource.cache
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\obj\Debug\WFA_HospitalAutomation.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\obj\Debug\WFA_HospitalAutomation.exe
+C:\Users\User\Desktop\hwrepo\WFA_HospitalAutomation\WFA_HospitalAutomation\obj\Debug\WFA_HospitalAutomation.pdb
