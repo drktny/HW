@@ -29,6 +29,7 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditInfo));
             this.btnUpdate = new System.Windows.Forms.Button();
             this.rdFemale = new System.Windows.Forms.RadioButton();
             this.rdMale = new System.Windows.Forms.RadioButton();
@@ -51,9 +52,10 @@ namespace WFA_HospitalAutomation
             this.btnUpdate.Location = new System.Drawing.Point(263, 361);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(139, 46);
-            this.btnUpdate.TabIndex = 22;
+            this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // rdFemale
             // 
@@ -61,7 +63,7 @@ namespace WFA_HospitalAutomation
             this.rdFemale.Location = new System.Drawing.Point(328, 310);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(108, 33);
-            this.rdFemale.TabIndex = 20;
+            this.rdFemale.TabIndex = 7;
             this.rdFemale.TabStop = true;
             this.rdFemale.Text = "Female";
             this.rdFemale.UseVisualStyleBackColor = true;
@@ -72,7 +74,7 @@ namespace WFA_HospitalAutomation
             this.rdMale.Location = new System.Drawing.Point(227, 310);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(84, 33);
-            this.rdMale.TabIndex = 21;
+            this.rdMale.TabIndex = 6;
             this.rdMale.TabStop = true;
             this.rdMale.Text = "Male";
             this.rdMale.UseVisualStyleBackColor = true;
@@ -82,21 +84,21 @@ namespace WFA_HospitalAutomation
             this.txtName.Location = new System.Drawing.Point(227, 55);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(209, 36);
-            this.txtName.TabIndex = 17;
+            this.txtName.TabIndex = 1;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(227, 261);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(209, 36);
-            this.txtPassword.TabIndex = 18;
+            this.txtPassword.TabIndex = 5;
             // 
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(227, 105);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(209, 36);
-            this.txtSurname.TabIndex = 19;
+            this.txtSurname.TabIndex = 2;
             // 
             // mskPhone
             // 
@@ -104,7 +106,7 @@ namespace WFA_HospitalAutomation
             this.mskPhone.Mask = "(999) 000-0000";
             this.mskPhone.Name = "mskPhone";
             this.mskPhone.Size = new System.Drawing.Size(209, 36);
-            this.mskPhone.TabIndex = 15;
+            this.mskPhone.TabIndex = 4;
             // 
             // mskTC
             // 
@@ -112,7 +114,7 @@ namespace WFA_HospitalAutomation
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(209, 36);
-            this.mskTC.TabIndex = 16;
+            this.mskTC.TabIndex = 3;
             this.mskTC.ValidatingType = typeof(int);
             // 
             // label5
@@ -171,8 +173,10 @@ namespace WFA_HospitalAutomation
             // 
             // FrmEditInfo
             // 
+            this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(570, 507);
             this.Controls.Add(this.btnUpdate);
@@ -190,9 +194,12 @@ namespace WFA_HospitalAutomation
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmEditInfo";
-            this.Text = "FrmEditInfo";
+            this.Text = "Patient Info Edit";
+            this.Load += new System.EventHandler(this.FrmEditInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

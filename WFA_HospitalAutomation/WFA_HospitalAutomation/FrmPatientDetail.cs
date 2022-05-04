@@ -50,5 +50,35 @@ namespace WFA_HospitalAutomation
             }
             connect.connection().Close();
         }
+
+        private void cmbBranch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbDoctor.Items.Clear();
+
+            SqlCommand command2 = new SqlCommand("Select DoctorName,DoctorSurname from Tbll_Doctors where DoctorBranch=@p1", connect.connection());
+            command2.Parameters.AddWithValue("@p1", cmbBranch.Text);
+            SqlDataReader dr2 = command2.ExecuteReader();
+            while (dr2.Read())
+            {
+                cmbDoctor.Items.Add(dr2[0] + " " + dr2[1]);
+            }
+            connect.connection().Close();
+        }
+
+        private void cmbDoctor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Appointments where AppointmentBranch='" + cmbBranch.Text + "'", connect.connection());
+            da.Fill(dt);
+            dtActiveAppointments.DataSource = dt;
+            connect.connection().Close();
+        }
+
+        private void lnkEditInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmEditInfo frm = new FrmEditInfo();
+            frm.TCno = lblTC.Text;
+            frm.Show();
+        }
     }
 }

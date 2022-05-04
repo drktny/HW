@@ -47,6 +47,8 @@ namespace WFA_HospitalAutomation
             this.dtAppointmentHistory = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtActiveAppointments = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -106,6 +108,7 @@ namespace WFA_HospitalAutomation
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtId);
             this.groupBox2.Controls.Add(this.lnkEditInfo);
             this.groupBox2.Controls.Add(this.btnGetAppointment);
             this.groupBox2.Controls.Add(this.rchComplaint);
@@ -113,6 +116,7 @@ namespace WFA_HospitalAutomation
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.cmbDoctor);
             this.groupBox2.Controls.Add(this.cmbBranch);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(12, 222);
             this.groupBox2.Name = "groupBox2";
@@ -130,10 +134,11 @@ namespace WFA_HospitalAutomation
             this.lnkEditInfo.TabIndex = 5;
             this.lnkEditInfo.TabStop = true;
             this.lnkEditInfo.Text = "Edit Info...";
+            this.lnkEditInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditInfo_LinkClicked);
             // 
             // btnGetAppointment
             // 
-            this.btnGetAppointment.Location = new System.Drawing.Point(149, 353);
+            this.btnGetAppointment.Location = new System.Drawing.Point(149, 376);
             this.btnGetAppointment.Name = "btnGetAppointment";
             this.btnGetAppointment.Size = new System.Drawing.Size(277, 50);
             this.btnGetAppointment.TabIndex = 2;
@@ -142,7 +147,7 @@ namespace WFA_HospitalAutomation
             // 
             // rchComplaint
             // 
-            this.rchComplaint.Location = new System.Drawing.Point(149, 173);
+            this.rchComplaint.Location = new System.Drawing.Point(149, 196);
             this.rchComplaint.Name = "rchComplaint";
             this.rchComplaint.Size = new System.Drawing.Size(277, 165);
             this.rchComplaint.TabIndex = 4;
@@ -151,7 +156,7 @@ namespace WFA_HospitalAutomation
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 176);
+            this.label7.Location = new System.Drawing.Point(22, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 29);
             this.label7.TabIndex = 0;
@@ -160,7 +165,7 @@ namespace WFA_HospitalAutomation
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 116);
+            this.label6.Location = new System.Drawing.Point(55, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 29);
             this.label6.TabIndex = 0;
@@ -169,23 +174,25 @@ namespace WFA_HospitalAutomation
             // cmbDoctor
             // 
             this.cmbDoctor.FormattingEnabled = true;
-            this.cmbDoctor.Location = new System.Drawing.Point(149, 113);
+            this.cmbDoctor.Location = new System.Drawing.Point(149, 136);
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Size = new System.Drawing.Size(277, 36);
             this.cmbDoctor.TabIndex = 3;
+            this.cmbDoctor.SelectedIndexChanged += new System.EventHandler(this.cmbDoctor_SelectedIndexChanged);
             // 
             // cmbBranch
             // 
             this.cmbBranch.FormattingEnabled = true;
-            this.cmbBranch.Location = new System.Drawing.Point(149, 59);
+            this.cmbBranch.Location = new System.Drawing.Point(149, 82);
             this.cmbBranch.Name = "cmbBranch";
             this.cmbBranch.Size = new System.Drawing.Size(277, 36);
             this.cmbBranch.TabIndex = 3;
+            this.cmbBranch.SelectedIndexChanged += new System.EventHandler(this.cmbBranch_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 62);
+            this.label5.Location = new System.Drawing.Point(53, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 29);
             this.label5.TabIndex = 0;
@@ -232,6 +239,22 @@ namespace WFA_HospitalAutomation
             this.dtActiveAppointments.RowTemplate.Height = 24;
             this.dtActiveAppointments.Size = new System.Drawing.Size(719, 267);
             this.dtActiveAppointments.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(105, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Id:";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(149, 35);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(277, 36);
+            this.txtId.TabIndex = 6;
             // 
             // FrmPatientDetail
             // 
@@ -280,5 +303,7 @@ namespace WFA_HospitalAutomation
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dtActiveAppointments;
         private System.Windows.Forms.LinkLabel lnkEditInfo;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label2;
     }
 }
