@@ -30,5 +30,12 @@ namespace WFA_HospitalAutomation
             frm.Show();
             this.Hide();
         }
+
+        private void btnAssistantLogin_Click(object sender, EventArgs e)
+        {
+            FrmAssistantLogin frm = new FrmAssistantLogin();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

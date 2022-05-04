@@ -72,6 +72,7 @@ namespace WFA_HospitalAutomation
             this.btnAssistantLogin.Size = new System.Drawing.Size(283, 229);
             this.btnAssistantLogin.TabIndex = 0;
             this.btnAssistantLogin.UseVisualStyleBackColor = true;
+            this.btnAssistantLogin.Click += new System.EventHandler(this.btnAssistantLogin_Click);
             // 
             // label1
             // 

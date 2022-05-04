@@ -29,8 +29,8 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAssistantLogin));
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lnkSignIn = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
@@ -46,16 +46,7 @@ namespace WFA_HospitalAutomation
             this.btnLogin.TabIndex = 12;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // lnkSignIn
-            // 
-            this.lnkSignIn.AutoSize = true;
-            this.lnkSignIn.Location = new System.Drawing.Point(435, 226);
-            this.lnkSignIn.Name = "lnkSignIn";
-            this.lnkSignIn.Size = new System.Drawing.Size(82, 29);
-            this.lnkSignIn.TabIndex = 11;
-            this.lnkSignIn.TabStop = true;
-            this.lnkSignIn.Text = "Sign in";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
@@ -73,6 +64,8 @@ namespace WFA_HospitalAutomation
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(178, 36);
             this.txtPassword.TabIndex = 9;
+            this.txtPassword.Text = "78787";
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // mskTC
             // 
@@ -81,6 +74,7 @@ namespace WFA_HospitalAutomation
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(178, 36);
             this.mskTC.TabIndex = 8;
+            this.mskTC.Text = "77777777777";
             this.mskTC.ValidatingType = typeof(int);
             // 
             // label2
@@ -103,21 +97,24 @@ namespace WFA_HospitalAutomation
             // 
             // FrmAssistantLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(648, 441);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lnkSignIn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.mskTC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmAssistantLogin";
-            this.Text = "FrmAssistantLogin";
+            this.Text = "Assistant Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +123,6 @@ namespace WFA_HospitalAutomation
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.LinkLabel lnkSignIn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.MaskedTextBox mskTC;

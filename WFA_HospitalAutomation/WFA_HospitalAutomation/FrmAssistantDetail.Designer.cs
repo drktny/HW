@@ -35,39 +35,39 @@ namespace WFA_HospitalAutomation
             this.lblTC = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rchAnnouncement = new System.Windows.Forms.RichTextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.rchAnnouncement = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.mskDate = new System.Windows.Forms.MaskedTextBox();
-            this.mskHour = new System.Windows.Forms.MaskedTextBox();
-            this.cmbBranch = new System.Windows.Forms.ComboBox();
-            this.cmbDoctor = new System.Windows.Forms.ComboBox();
-            this.mskPatientTC = new System.Windows.Forms.MaskedTextBox();
-            this.chkStatus = new System.Windows.Forms.CheckBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.chkStatus = new System.Windows.Forms.CheckBox();
+            this.cmbDoctor = new System.Windows.Forms.ComboBox();
+            this.cmbBranch = new System.Windows.Forms.ComboBox();
+            this.mskHour = new System.Windows.Forms.MaskedTextBox();
+            this.mskPatientTC = new System.Windows.Forms.MaskedTextBox();
+            this.mskDate = new System.Windows.Forms.MaskedTextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtBranches = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtDoctors = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnDoctorPanel = new System.Windows.Forms.Button();
-            this.btnBranchPanel = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
+            this.btnBranchPanel = new System.Windows.Forms.Button();
+            this.btnDoctorPanel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtBranches)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDoctors)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,14 +131,6 @@ namespace WFA_HospitalAutomation
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Announcement";
             // 
-            // rchAnnouncement
-            // 
-            this.rchAnnouncement.Location = new System.Drawing.Point(6, 45);
-            this.rchAnnouncement.Name = "rchAnnouncement";
-            this.rchAnnouncement.Size = new System.Drawing.Size(318, 248);
-            this.rchAnnouncement.TabIndex = 0;
-            this.rchAnnouncement.Text = "";
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(6, 306);
@@ -147,6 +139,14 @@ namespace WFA_HospitalAutomation
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // rchAnnouncement
+            // 
+            this.rchAnnouncement.Location = new System.Drawing.Point(6, 45);
+            this.rchAnnouncement.Name = "rchAnnouncement";
+            this.rchAnnouncement.Size = new System.Drawing.Size(318, 248);
+            this.rchAnnouncement.TabIndex = 0;
+            this.rchAnnouncement.Text = "";
             // 
             // groupBox3
             // 
@@ -172,109 +172,24 @@ namespace WFA_HospitalAutomation
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Appointment Panel";
             // 
-            // label2
+            // btnUpdate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Id:";
+            this.btnUpdate.Location = new System.Drawing.Point(166, 521);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(153, 54);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // btnSave
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(77, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 29);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Date:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(77, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 29);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Hour:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 29);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Branch:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(57, 285);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 29);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Doctor:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 345);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 29);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Patient TC:";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(166, 63);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(153, 36);
-            this.txtId.TabIndex = 8;
-            // 
-            // mskDate
-            // 
-            this.mskDate.Location = new System.Drawing.Point(166, 117);
-            this.mskDate.Mask = "00/00/0000";
-            this.mskDate.Name = "mskDate";
-            this.mskDate.Size = new System.Drawing.Size(153, 36);
-            this.mskDate.TabIndex = 9;
-            this.mskDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // mskHour
-            // 
-            this.mskHour.Location = new System.Drawing.Point(166, 170);
-            this.mskHour.Mask = "00:00";
-            this.mskHour.Name = "mskHour";
-            this.mskHour.Size = new System.Drawing.Size(153, 36);
-            this.mskHour.TabIndex = 9;
-            this.mskHour.ValidatingType = typeof(System.DateTime);
-            // 
-            // cmbBranch
-            // 
-            this.cmbBranch.FormattingEnabled = true;
-            this.cmbBranch.Location = new System.Drawing.Point(166, 227);
-            this.cmbBranch.Name = "cmbBranch";
-            this.cmbBranch.Size = new System.Drawing.Size(153, 36);
-            this.cmbBranch.TabIndex = 10;
-            // 
-            // cmbDoctor
-            // 
-            this.cmbDoctor.FormattingEnabled = true;
-            this.cmbDoctor.Location = new System.Drawing.Point(166, 282);
-            this.cmbDoctor.Name = "cmbDoctor";
-            this.cmbDoctor.Size = new System.Drawing.Size(153, 36);
-            this.cmbDoctor.TabIndex = 10;
-            // 
-            // mskPatientTC
-            // 
-            this.mskPatientTC.Location = new System.Drawing.Point(166, 342);
-            this.mskPatientTC.Mask = "00000000000";
-            this.mskPatientTC.Name = "mskPatientTC";
-            this.mskPatientTC.Size = new System.Drawing.Size(153, 36);
-            this.mskPatientTC.TabIndex = 9;
-            this.mskPatientTC.ValidatingType = typeof(int);
+            this.btnSave.Location = new System.Drawing.Point(166, 455);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(153, 54);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // chkStatus
             // 
@@ -286,65 +201,153 @@ namespace WFA_HospitalAutomation
             this.chkStatus.Text = "Status";
             this.chkStatus.UseVisualStyleBackColor = true;
             // 
-            // btnSave
+            // cmbDoctor
             // 
-            this.btnSave.Location = new System.Drawing.Point(166, 455);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(153, 54);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.cmbDoctor.FormattingEnabled = true;
+            this.cmbDoctor.Location = new System.Drawing.Point(166, 282);
+            this.cmbDoctor.Name = "cmbDoctor";
+            this.cmbDoctor.Size = new System.Drawing.Size(153, 36);
+            this.cmbDoctor.TabIndex = 10;
             // 
-            // btnUpdate
+            // cmbBranch
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(166, 521);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(153, 54);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.cmbBranch.FormattingEnabled = true;
+            this.cmbBranch.Location = new System.Drawing.Point(166, 227);
+            this.cmbBranch.Name = "cmbBranch";
+            this.cmbBranch.Size = new System.Drawing.Size(153, 36);
+            this.cmbBranch.TabIndex = 10;
+            // 
+            // mskHour
+            // 
+            this.mskHour.Location = new System.Drawing.Point(166, 170);
+            this.mskHour.Mask = "00:00";
+            this.mskHour.Name = "mskHour";
+            this.mskHour.Size = new System.Drawing.Size(153, 36);
+            this.mskHour.TabIndex = 9;
+            this.mskHour.ValidatingType = typeof(System.DateTime);
+            // 
+            // mskPatientTC
+            // 
+            this.mskPatientTC.Location = new System.Drawing.Point(166, 342);
+            this.mskPatientTC.Mask = "00000000000";
+            this.mskPatientTC.Name = "mskPatientTC";
+            this.mskPatientTC.Size = new System.Drawing.Size(153, 36);
+            this.mskPatientTC.TabIndex = 9;
+            this.mskPatientTC.ValidatingType = typeof(int);
+            // 
+            // mskDate
+            // 
+            this.mskDate.Location = new System.Drawing.Point(166, 117);
+            this.mskDate.Mask = "00/00/0000";
+            this.mskDate.Name = "mskDate";
+            this.mskDate.Size = new System.Drawing.Size(153, 36);
+            this.mskDate.TabIndex = 9;
+            this.mskDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(166, 63);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(153, 36);
+            this.txtId.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 345);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 29);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Patient TC:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(57, 285);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 29);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Doctor:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(55, 230);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 29);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Branch:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(77, 173);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 29);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Hour:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(77, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 29);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Date:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(106, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 29);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Id:";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Controls.Add(this.dtBranches);
             this.groupBox4.Location = new System.Drawing.Point(787, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(583, 297);
+            this.groupBox4.Size = new System.Drawing.Size(655, 297);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Branches";
             // 
-            // dataGridView1
+            // dtBranches
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 262);
-            this.dataGridView1.TabIndex = 0;
+            this.dtBranches.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtBranches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtBranches.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtBranches.Location = new System.Drawing.Point(3, 32);
+            this.dtBranches.Name = "dtBranches";
+            this.dtBranches.RowHeadersWidth = 51;
+            this.dtBranches.RowTemplate.Height = 24;
+            this.dtBranches.Size = new System.Drawing.Size(649, 262);
+            this.dtBranches.TabIndex = 0;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dataGridView2);
+            this.groupBox5.Controls.Add(this.dtDoctors);
             this.groupBox5.Location = new System.Drawing.Point(787, 315);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(583, 462);
+            this.groupBox5.Size = new System.Drawing.Size(655, 462);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Doctors";
             // 
-            // dataGridView2
+            // dtDoctors
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 32);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(577, 427);
-            this.dataGridView2.TabIndex = 0;
+            this.dtDoctors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDoctors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtDoctors.Location = new System.Drawing.Point(3, 32);
+            this.dtDoctors.Name = "dtDoctors";
+            this.dtDoctors.RowHeadersWidth = 51;
+            this.dtDoctors.RowTemplate.Height = 24;
+            this.dtDoctors.Size = new System.Drawing.Size(649, 427);
+            this.dtDoctors.TabIndex = 0;
             // 
             // groupBox6
             // 
@@ -358,14 +361,14 @@ namespace WFA_HospitalAutomation
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Easy Access";
             // 
-            // btnDoctorPanel
+            // btnList
             // 
-            this.btnDoctorPanel.Location = new System.Drawing.Point(15, 59);
-            this.btnDoctorPanel.Name = "btnDoctorPanel";
-            this.btnDoctorPanel.Size = new System.Drawing.Size(227, 54);
-            this.btnDoctorPanel.TabIndex = 0;
-            this.btnDoctorPanel.Text = "Doctor Panel";
-            this.btnDoctorPanel.UseVisualStyleBackColor = true;
+            this.btnList.Location = new System.Drawing.Point(520, 59);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(227, 54);
+            this.btnList.TabIndex = 0;
+            this.btnList.Text = "Appointment List";
+            this.btnList.UseVisualStyleBackColor = true;
             // 
             // btnBranchPanel
             // 
@@ -376,21 +379,21 @@ namespace WFA_HospitalAutomation
             this.btnBranchPanel.Text = "Branch Panel";
             this.btnBranchPanel.UseVisualStyleBackColor = true;
             // 
-            // btnList
+            // btnDoctorPanel
             // 
-            this.btnList.Location = new System.Drawing.Point(520, 59);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(227, 54);
-            this.btnList.TabIndex = 0;
-            this.btnList.Text = "Appointment List";
-            this.btnList.UseVisualStyleBackColor = true;
+            this.btnDoctorPanel.Location = new System.Drawing.Point(15, 59);
+            this.btnDoctorPanel.Name = "btnDoctorPanel";
+            this.btnDoctorPanel.Size = new System.Drawing.Size(227, 54);
+            this.btnDoctorPanel.TabIndex = 0;
+            this.btnDoctorPanel.Text = "Doctor Panel";
+            this.btnDoctorPanel.UseVisualStyleBackColor = true;
             // 
             // FrmAssistantDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1382, 838);
+            this.ClientSize = new System.Drawing.Size(1454, 838);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -401,15 +404,16 @@ namespace WFA_HospitalAutomation
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAssistantDetail";
             this.Text = "FrmAssistantDetail";
+            this.Load += new System.EventHandler(this.FrmAssistantDetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtBranches)).EndInit();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDoctors)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -442,9 +446,9 @@ namespace WFA_HospitalAutomation
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtBranches;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtDoctors;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnBranchPanel;
