@@ -30,29 +30,29 @@ namespace WFA_HospitalAutomation
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNameSurname = new System.Windows.Forms.Label();
             this.lblTC = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblNameSurname = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lnkEditInfo = new System.Windows.Forms.LinkLabel();
             this.btnGetAppointment = new System.Windows.Forms.Button();
-            this.cmbBranch = new System.Windows.Forms.ComboBox();
             this.rchComplaint = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbDoctor = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cmbBranch = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtAppointmentHistory = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.lnkEditInfo = new System.Windows.Forms.LinkLabel();
+            this.dtActiveAppointments = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtAppointmentHistory)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtActiveAppointments)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -68,14 +68,14 @@ namespace WFA_HospitalAutomation
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient Info";
             // 
-            // label1
+            // lblNameSurname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 29);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "TC No:";
+            this.lblNameSurname.AutoSize = true;
+            this.lblNameSurname.Location = new System.Drawing.Point(149, 117);
+            this.lblNameSurname.Name = "lblNameSurname";
+            this.lblNameSurname.Size = new System.Drawing.Size(100, 29);
+            this.lblNameSurname.TabIndex = 6;
+            this.lblNameSurname.Text = "Null Null";
             // 
             // lblTC
             // 
@@ -95,14 +95,14 @@ namespace WFA_HospitalAutomation
             this.label3.TabIndex = 5;
             this.label3.Text = "Full Name:";
             // 
-            // lblNameSurname
+            // label1
             // 
-            this.lblNameSurname.AutoSize = true;
-            this.lblNameSurname.Location = new System.Drawing.Point(149, 117);
-            this.lblNameSurname.Name = "lblNameSurname";
-            this.lblNameSurname.Size = new System.Drawing.Size(100, 29);
-            this.lblNameSurname.TabIndex = 6;
-            this.lblNameSurname.Text = "Null Null";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(63, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 29);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "TC No:";
             // 
             // groupBox2
             // 
@@ -121,6 +121,16 @@ namespace WFA_HospitalAutomation
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Appointment Panel";
             // 
+            // lnkEditInfo
+            // 
+            this.lnkEditInfo.AutoSize = true;
+            this.lnkEditInfo.Location = new System.Drawing.Point(27, 421);
+            this.lnkEditInfo.Name = "lnkEditInfo";
+            this.lnkEditInfo.Size = new System.Drawing.Size(116, 29);
+            this.lnkEditInfo.TabIndex = 5;
+            this.lnkEditInfo.TabStop = true;
+            this.lnkEditInfo.Text = "Edit Info...";
+            // 
             // btnGetAppointment
             // 
             this.btnGetAppointment.Location = new System.Drawing.Point(149, 353);
@@ -130,14 +140,6 @@ namespace WFA_HospitalAutomation
             this.btnGetAppointment.Text = "Make an Appointment";
             this.btnGetAppointment.UseVisualStyleBackColor = true;
             // 
-            // cmbBranch
-            // 
-            this.cmbBranch.FormattingEnabled = true;
-            this.cmbBranch.Location = new System.Drawing.Point(149, 59);
-            this.cmbBranch.Name = "cmbBranch";
-            this.cmbBranch.Size = new System.Drawing.Size(277, 36);
-            this.cmbBranch.TabIndex = 3;
-            // 
             // rchComplaint
             // 
             this.rchComplaint.Location = new System.Drawing.Point(149, 173);
@@ -146,14 +148,14 @@ namespace WFA_HospitalAutomation
             this.rchComplaint.TabIndex = 4;
             this.rchComplaint.Text = "";
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 29);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Branch:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 176);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 29);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Complaint:";
             // 
             // label6
             // 
@@ -172,18 +174,26 @@ namespace WFA_HospitalAutomation
             this.cmbDoctor.Size = new System.Drawing.Size(277, 36);
             this.cmbDoctor.TabIndex = 3;
             // 
-            // label7
+            // cmbBranch
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 176);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Complaint:";
+            this.cmbBranch.FormattingEnabled = true;
+            this.cmbBranch.Location = new System.Drawing.Point(149, 59);
+            this.cmbBranch.Name = "cmbBranch";
+            this.cmbBranch.Size = new System.Drawing.Size(277, 36);
+            this.cmbBranch.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(53, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 29);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Branch:";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dtAppointmentHistory);
             this.groupBox3.Location = new System.Drawing.Point(473, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(725, 368);
@@ -191,9 +201,20 @@ namespace WFA_HospitalAutomation
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Appointment History";
             // 
+            // dtAppointmentHistory
+            // 
+            this.dtAppointmentHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtAppointmentHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtAppointmentHistory.Location = new System.Drawing.Point(3, 32);
+            this.dtAppointmentHistory.Name = "dtAppointmentHistory";
+            this.dtAppointmentHistory.RowHeadersWidth = 51;
+            this.dtAppointmentHistory.RowTemplate.Height = 24;
+            this.dtAppointmentHistory.Size = new System.Drawing.Size(719, 333);
+            this.dtAppointmentHistory.TabIndex = 0;
+            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dataGridView2);
+            this.groupBox4.Controls.Add(this.dtActiveAppointments);
             this.groupBox4.Location = new System.Drawing.Point(473, 377);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(725, 302);
@@ -201,37 +222,16 @@ namespace WFA_HospitalAutomation
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Active Appointments";
             // 
-            // dataGridView1
+            // dtActiveAppointments
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(719, 333);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 32);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(719, 267);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // lnkEditInfo
-            // 
-            this.lnkEditInfo.AutoSize = true;
-            this.lnkEditInfo.Location = new System.Drawing.Point(27, 421);
-            this.lnkEditInfo.Name = "lnkEditInfo";
-            this.lnkEditInfo.Size = new System.Drawing.Size(116, 29);
-            this.lnkEditInfo.TabIndex = 5;
-            this.lnkEditInfo.TabStop = true;
-            this.lnkEditInfo.Text = "Edit Info...";
+            this.dtActiveAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtActiveAppointments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtActiveAppointments.Location = new System.Drawing.Point(3, 32);
+            this.dtActiveAppointments.Name = "dtActiveAppointments";
+            this.dtActiveAppointments.RowHeadersWidth = 51;
+            this.dtActiveAppointments.RowTemplate.Height = 24;
+            this.dtActiveAppointments.Size = new System.Drawing.Size(719, 267);
+            this.dtActiveAppointments.TabIndex = 0;
             // 
             // FrmPatientDetail
             // 
@@ -247,14 +247,15 @@ namespace WFA_HospitalAutomation
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPatientDetail";
             this.Text = "PatientDetail";
+            this.Load += new System.EventHandler(this.FrmPatientDetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtAppointmentHistory)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtActiveAppointments)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,9 +276,9 @@ namespace WFA_HospitalAutomation
         private System.Windows.Forms.ComboBox cmbBranch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtAppointmentHistory;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtActiveAppointments;
         private System.Windows.Forms.LinkLabel lnkEditInfo;
     }
 }

@@ -34,6 +34,7 @@ namespace WFA_HospitalAutomation
             if (dr.Read())
             {
                 FrmPatientDetail frm = new FrmPatientDetail();
+                frm.tc = mskTC.Text;
                 frm.Show();
                 this.Hide();
             }
