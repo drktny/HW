@@ -30,9 +30,9 @@ namespace WFA_HospitalAutomation
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogins));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPatientLogin = new System.Windows.Forms.Button();
+            this.btnDoctorLogin = new System.Windows.Forms.Button();
+            this.btnAssistantLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,35 +41,37 @@ namespace WFA_HospitalAutomation
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnPatientLogin
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(84, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(283, 229);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPatientLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPatientLogin.BackgroundImage")));
+            this.btnPatientLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPatientLogin.Location = new System.Drawing.Point(84, 383);
+            this.btnPatientLogin.Name = "btnPatientLogin";
+            this.btnPatientLogin.Size = new System.Drawing.Size(283, 229);
+            this.btnPatientLogin.TabIndex = 0;
+            this.btnPatientLogin.UseVisualStyleBackColor = true;
+            this.btnPatientLogin.Click += new System.EventHandler(this.btnPatientLogin_Click);
             // 
-            // button2
+            // btnDoctorLogin
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(442, 383);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(283, 229);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDoctorLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDoctorLogin.BackgroundImage")));
+            this.btnDoctorLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDoctorLogin.Location = new System.Drawing.Point(442, 383);
+            this.btnDoctorLogin.Name = "btnDoctorLogin";
+            this.btnDoctorLogin.Size = new System.Drawing.Size(283, 229);
+            this.btnDoctorLogin.TabIndex = 0;
+            this.btnDoctorLogin.UseVisualStyleBackColor = true;
+            this.btnDoctorLogin.Click += new System.EventHandler(this.btnDoctorLogin_Click);
             // 
-            // button3
+            // btnAssistantLogin
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(812, 383);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(283, 229);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAssistantLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAssistantLogin.BackgroundImage")));
+            this.btnAssistantLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAssistantLogin.Location = new System.Drawing.Point(812, 383);
+            this.btnAssistantLogin.Name = "btnAssistantLogin";
+            this.btnAssistantLogin.Size = new System.Drawing.Size(283, 229);
+            this.btnAssistantLogin.TabIndex = 0;
+            this.btnAssistantLogin.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -122,6 +124,7 @@ namespace WFA_HospitalAutomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1204, 686);
             this.Controls.Add(this.label4);
@@ -129,13 +132,15 @@ namespace WFA_HospitalAutomation
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAssistantLogin);
+            this.Controls.Add(this.btnDoctorLogin);
+            this.Controls.Add(this.btnPatientLogin);
             this.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmLogins";
-            this.Text = "Form1";
+            this.Text = "Tonya Hospital Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,9 +149,9 @@ namespace WFA_HospitalAutomation
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPatientLogin;
+        private System.Windows.Forms.Button btnDoctorLogin;
+        private System.Windows.Forms.Button btnAssistantLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

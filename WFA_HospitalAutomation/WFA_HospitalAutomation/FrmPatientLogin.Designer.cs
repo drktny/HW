@@ -29,6 +29,7 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPatientLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
@@ -71,6 +72,7 @@ namespace WFA_HospitalAutomation
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(178, 36);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -91,6 +93,7 @@ namespace WFA_HospitalAutomation
             this.lnkSignIn.TabIndex = 4;
             this.lnkSignIn.TabStop = true;
             this.lnkSignIn.Text = "Sign in";
+            this.lnkSignIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSignIn_LinkClicked);
             // 
             // btnLogin
             // 
@@ -100,11 +103,14 @@ namespace WFA_HospitalAutomation
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmPatientLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(636, 402);
             this.Controls.Add(this.btnLogin);
@@ -115,9 +121,11 @@ namespace WFA_HospitalAutomation
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmPatientLogin";
-            this.Text = "FrmPatientLogin";
+            this.Text = "Patient Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

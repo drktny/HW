@@ -16,5 +16,19 @@ namespace WFA_HospitalAutomation
         {
             InitializeComponent();
         }
+
+        private void btnPatientLogin_Click(object sender, EventArgs e)
+        {
+            FrmPatientLogin frm = new FrmPatientLogin();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnDoctorLogin_Click(object sender, EventArgs e)
+        {
+            FrmDoctorLogin frm = new FrmDoctorLogin();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPatientSignIn));
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@ namespace WFA_HospitalAutomation
             this.txtSurname.Location = new System.Drawing.Point(191, 128);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(209, 36);
-            this.txtSurname.TabIndex = 6;
+            this.txtSurname.TabIndex = 2;
             // 
             // mskTC
             // 
@@ -58,7 +59,7 @@ namespace WFA_HospitalAutomation
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(209, 36);
-            this.mskTC.TabIndex = 5;
+            this.mskTC.TabIndex = 3;
             this.mskTC.ValidatingType = typeof(int);
             // 
             // label2
@@ -93,7 +94,7 @@ namespace WFA_HospitalAutomation
             this.txtPassword.Location = new System.Drawing.Point(191, 284);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(209, 36);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 5;
             // 
             // label4
             // 
@@ -118,7 +119,7 @@ namespace WFA_HospitalAutomation
             this.txtName.Location = new System.Drawing.Point(191, 78);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(209, 36);
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 1;
             // 
             // mskPhone
             // 
@@ -126,7 +127,7 @@ namespace WFA_HospitalAutomation
             this.mskPhone.Mask = "(999) 000-0000";
             this.mskPhone.Name = "mskPhone";
             this.mskPhone.Size = new System.Drawing.Size(209, 36);
-            this.mskPhone.TabIndex = 5;
+            this.mskPhone.TabIndex = 4;
             // 
             // label7
             // 
@@ -143,7 +144,7 @@ namespace WFA_HospitalAutomation
             this.rdMale.Location = new System.Drawing.Point(191, 333);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(84, 33);
-            this.rdMale.TabIndex = 7;
+            this.rdMale.TabIndex = 6;
             this.rdMale.TabStop = true;
             this.rdMale.Text = "Male";
             this.rdMale.UseVisualStyleBackColor = true;
@@ -168,13 +169,16 @@ namespace WFA_HospitalAutomation
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmPatientSignIn
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(520, 520);
+            this.ClientSize = new System.Drawing.Size(520, 498);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.rdFemale);
             this.Controls.Add(this.rdMale);
@@ -190,9 +194,11 @@ namespace WFA_HospitalAutomation
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmPatientSignIn";
-            this.Text = "FrmPatientSignIn";
+            this.Text = "Patient Sign In";
             this.ResumeLayout(false);
             this.PerformLayout();
 
