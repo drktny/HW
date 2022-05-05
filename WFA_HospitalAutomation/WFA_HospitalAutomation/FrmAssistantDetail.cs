@@ -112,5 +112,11 @@ namespace WFA_HospitalAutomation
             FrmDoctorPanel drFrm = new FrmDoctorPanel();
             drFrm.Show();
         }
+
+        private void btnBranchPanel_Click(object sender, EventArgs e)
+        {
+            FrmBranchPanel brFrm = new FrmBranchPanel();
+            brFrm.Show();
+        }
     }
 }

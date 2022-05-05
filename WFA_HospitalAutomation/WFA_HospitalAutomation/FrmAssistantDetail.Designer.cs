@@ -380,6 +380,7 @@ namespace WFA_HospitalAutomation
             this.btnBranchPanel.TabIndex = 0;
             this.btnBranchPanel.Text = "Branch Panel";
             this.btnBranchPanel.UseVisualStyleBackColor = true;
+            this.btnBranchPanel.Click += new System.EventHandler(this.btnBranchPanel_Click);
             // 
             // btnDoctorPanel
             // 
