@@ -199,6 +199,7 @@ namespace WFA_HospitalAutomation
             this.MaximizeBox = false;
             this.Name = "FrmPatientSignIn";
             this.Text = "Patient Sign In";
+            this.Load += new System.EventHandler(this.FrmPatientSignIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

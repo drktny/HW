@@ -28,10 +28,15 @@ namespace WFA_HospitalAutomation
             command.Parameters.AddWithValue("@p3", mskTC.Text);
             command.Parameters.AddWithValue("@p4", mskPhone.Text);
             command.Parameters.AddWithValue("@p5", txtPassword.Text);
-            command.Parameters.AddWithValue("@p6", rdMale.Checked ? "Male" : "Fmale");
+            command.Parameters.AddWithValue("@p6", rdMale.Checked ? "Male" : "Female");
             command.ExecuteNonQuery();
             cnt.connection().Close();
             MessageBox.Show("You are succesfully signed in. Your password: " + txtPassword.Text, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void FrmPatientSignIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

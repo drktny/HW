@@ -139,6 +139,7 @@ namespace WFA_HospitalAutomation
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // rchAnnouncement
             // 
@@ -216,6 +217,7 @@ namespace WFA_HospitalAutomation
             this.cmbBranch.Name = "cmbBranch";
             this.cmbBranch.Size = new System.Drawing.Size(153, 36);
             this.cmbBranch.TabIndex = 10;
+            this.cmbBranch.SelectedIndexChanged += new System.EventHandler(this.cmbBranch_SelectedIndexChanged);
             // 
             // mskHour
             // 
@@ -387,6 +389,7 @@ namespace WFA_HospitalAutomation
             this.btnDoctorPanel.TabIndex = 0;
             this.btnDoctorPanel.Text = "Doctor Panel";
             this.btnDoctorPanel.UseVisualStyleBackColor = true;
+            this.btnDoctorPanel.Click += new System.EventHandler(this.btnDoctorPanel_Click);
             // 
             // FrmAssistantDetail
             // 

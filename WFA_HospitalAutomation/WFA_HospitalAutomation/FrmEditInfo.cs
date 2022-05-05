@@ -52,7 +52,7 @@ namespace WFA_HospitalAutomation
             command1.Parameters.AddWithValue("@p2", txtSurname.Text);
             command1.Parameters.AddWithValue("@p3", mskPhone.Text);
             command1.Parameters.AddWithValue("@p4", txtPassword.Text);
-            command1.Parameters.AddWithValue("@p5", rdMale.Checked ? "Male" : "Fmale");
+            command1.Parameters.AddWithValue("@p5", rdMale.Checked ? "Male" : "Female");
             command1.Parameters.AddWithValue("@p6", mskTC.Text);
             command1.ExecuteNonQuery(); //for insert,update & delete processes
             connect.connection().Close();

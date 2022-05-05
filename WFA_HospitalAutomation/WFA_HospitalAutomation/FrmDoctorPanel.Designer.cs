@@ -29,7 +29,8 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbDoctor = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoctorPanel));
+            this.cmbBranch = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,27 +40,27 @@ namespace WFA_HospitalAutomation
             this.mskDoctorTC = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtDoctors = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDoctors)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmbDoctor
+            // cmbBranch
             // 
-            this.cmbDoctor.FormattingEnabled = true;
-            this.cmbDoctor.Location = new System.Drawing.Point(172, 151);
-            this.cmbDoctor.Name = "cmbDoctor";
-            this.cmbDoctor.Size = new System.Drawing.Size(201, 36);
-            this.cmbDoctor.TabIndex = 13;
+            this.cmbBranch.FormattingEnabled = true;
+            this.cmbBranch.Location = new System.Drawing.Point(172, 151);
+            this.cmbBranch.Name = "cmbBranch";
+            this.cmbBranch.Size = new System.Drawing.Size(201, 36);
+            this.cmbBranch.TabIndex = 3;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(172, 41);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(201, 36);
-            this.txtName.TabIndex = 12;
+            this.txtName.TabIndex = 1;
             // 
             // label2
             // 
@@ -102,7 +103,7 @@ namespace WFA_HospitalAutomation
             this.txtSurname.Location = new System.Drawing.Point(172, 96);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(201, 36);
-            this.txtSurname.TabIndex = 12;
+            this.txtSurname.TabIndex = 2;
             // 
             // mskDoctorTC
             // 
@@ -110,7 +111,7 @@ namespace WFA_HospitalAutomation
             this.mskDoctorTC.Mask = "00000000000";
             this.mskDoctorTC.Name = "mskDoctorTC";
             this.mskDoctorTC.Size = new System.Drawing.Size(201, 36);
-            this.mskDoctorTC.TabIndex = 14;
+            this.mskDoctorTC.TabIndex = 4;
             this.mskDoctorTC.ValidatingType = typeof(int);
             // 
             // label5
@@ -127,17 +128,19 @@ namespace WFA_HospitalAutomation
             this.txtPassword.Location = new System.Drawing.Point(172, 263);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(201, 36);
-            this.txtPassword.TabIndex = 12;
+            this.txtPassword.TabIndex = 5;
             // 
-            // dataGridView1
+            // dtDoctors
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(398, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 377);
-            this.dataGridView1.TabIndex = 15;
+            this.dtDoctors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDoctors.Location = new System.Drawing.Point(398, 37);
+            this.dtDoctors.Name = "dtDoctors";
+            this.dtDoctors.RowHeadersWidth = 51;
+            this.dtDoctors.RowTemplate.Height = 24;
+            this.dtDoctors.Size = new System.Drawing.Size(838, 377);
+            this.dtDoctors.TabIndex = 15;
+            this.dtDoctors.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDoctors_CellClick);
             // 
             // btnAdd
             // 
@@ -148,6 +151,7 @@ namespace WFA_HospitalAutomation
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -158,6 +162,7 @@ namespace WFA_HospitalAutomation
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -168,18 +173,21 @@ namespace WFA_HospitalAutomation
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmDoctorPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 446);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.ClientSize = new System.Drawing.Size(1248, 446);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtDoctors);
             this.Controls.Add(this.mskDoctorTC);
-            this.Controls.Add(this.cmbDoctor);
+            this.Controls.Add(this.cmbBranch);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
@@ -189,10 +197,13 @@ namespace WFA_HospitalAutomation
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoctorPanel";
-            this.Text = "FrmDoctorPanel";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Doctor Panel";
+            this.Load += new System.EventHandler(this.FrmDoctorPanel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtDoctors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +211,7 @@ namespace WFA_HospitalAutomation
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbDoctor;
+        private System.Windows.Forms.ComboBox cmbBranch;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -210,7 +221,7 @@ namespace WFA_HospitalAutomation
         private System.Windows.Forms.MaskedTextBox mskDoctorTC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtDoctors;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;

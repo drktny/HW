@@ -46,6 +46,15 @@ namespace WFA_HospitalAutomation
             da2.Fill(dt2);
             dtDoctors.DataSource = dt2;
 
+            //Branches to combobox
+            SqlCommand commandBranch = new SqlCommand("Select BranchName from Tbll_Branches", connect.connection());
+            SqlDataReader dr1 = commandBranch.ExecuteReader();
+            while (dr1.Read())
+            {
+                cmbBranch.Items.Add(dr1[0]);
+            }
+            connect.connection().Close();
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -58,6 +67,50 @@ namespace WFA_HospitalAutomation
             commandSave.ExecuteNonQuery();
             connect.connection().Close();
             MessageBox.Show("Appointment is succesfully added to db.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void cmbBranch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbDoctor.Items.Clear();
+
+            SqlCommand command = new SqlCommand("Select (DoctorName + ' ' + DoctorSurname) from Tbll_Doctors where DoctorBranch=@p1", connect.connection());
+            command.Parameters.AddWithValue("@p1", cmbBranch.Text);
+            SqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                cmbDoctor.Items.Add(dataReader[0]);
+            }
+            connect.connection().Close();
+
+            #region Alternative
+            /*
+             cmbDoctor.Items.Clear();
+
+            SqlCommand command = new SqlCommand("Select DoctorName,DoctorSurname from Tbll_Doctors where DoctorBranch=@p1", connect.connection());
+            command.Parameters.AddWithValue("@p1", cmbBranch.Text);
+            SqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                cmbDoctor.Items.Add(dataReader[0] + ' ' + dataReader[1]);
+            }
+            connect.connection().Close();
+             */
+            #endregion
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("insert into Tbl_Announcements (Announcement) values (@d1)", connect.connection());
+            command.Parameters.AddWithValue("@d1", rchAnnouncement.Text);
+            command.ExecuteNonQuery();
+            connect.connection().Close();
+            MessageBox.Show("New announcement is added to db..", "Info",MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnDoctorPanel_Click(object sender, EventArgs e)
+        {
+            FrmDoctorPanel drFrm = new FrmDoctorPanel();
+            drFrm.Show();
         }
     }
 }
