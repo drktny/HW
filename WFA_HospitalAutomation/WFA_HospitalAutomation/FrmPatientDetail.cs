@@ -68,7 +68,7 @@ namespace WFA_HospitalAutomation
         private void cmbDoctor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Appointments where AppointmentBranch='" + cmbBranch.Text + "'", connect.connection());
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Appointments where AppointmentBranch='" + cmbBranch.Text + "' and AppointmentDoctor='" + cmbDoctor.Text +"' and AppointmentStatus=0", connect.connection());
             da.Fill(dt);
             dtActiveAppointments.DataSource = dt;
             connect.connection().Close();
@@ -79,6 +79,31 @@ namespace WFA_HospitalAutomation
             FrmEditInfo frm = new FrmEditInfo();
             frm.TCno = lblTC.Text;
             frm.Show();
+        }
+
+        private void btnGetAppointment_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("Update Tbl_Appointments set AppointmentStatus=@a1,PatientTC=@a2,PatientComplaint=@a3 where AppointmentId='" +txtId.Text +"'", connect.connection());
+            command.Parameters.AddWithValue("@a1", true);
+            command.Parameters.AddWithValue("@a2", lblTC.Text);
+            command.Parameters.AddWithValue("@a3", rchComplaint.Text);
+            command.ExecuteNonQuery();
+            connect.connection().Close();
+            MessageBox.Show("Appointment is saved to the system", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            dtAppointmentHistory.Controls.Clear();
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Appointments where PatientTC=" + tc, connect.connection());
+            da.Fill(dt);
+            dtAppointmentHistory.DataSource = dt;
+        }
+
+        private void dtActiveAppointments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedApp = dtActiveAppointments.SelectedCells[0].RowIndex;
+            txtId.Text = dtActiveAppointments.Rows[selectedApp].Cells[0].Value.ToString();
+            
         }
     }
 }

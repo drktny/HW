@@ -29,38 +29,45 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAppointmentList));
+            this.dtAppointmentList = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtAppointmentList)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtAppointmentList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1190, 688);
-            this.dataGridView1.TabIndex = 0;
+            this.dtAppointmentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtAppointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtAppointmentList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtAppointmentList.Location = new System.Drawing.Point(0, 0);
+            this.dtAppointmentList.Name = "dtAppointmentList";
+            this.dtAppointmentList.RowHeadersWidth = 51;
+            this.dtAppointmentList.RowTemplate.Height = 24;
+            this.dtAppointmentList.Size = new System.Drawing.Size(1190, 688);
+            this.dtAppointmentList.TabIndex = 0;
+            this.dtAppointmentList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAppointmentList_CellDoubleClick);
             // 
             // FrmAppointmentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1190, 688);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtAppointmentList);
             this.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmAppointmentList";
-            this.Text = "FrmAppointmentList";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Appointment List";
+            this.Load += new System.EventHandler(this.FrmAppointmentList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtAppointmentList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtAppointmentList;
     }
 }

@@ -118,5 +118,32 @@ namespace WFA_HospitalAutomation
             FrmBranchPanel brFrm = new FrmBranchPanel();
             brFrm.Show();
         }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            FrmAppointmentList appFrm = new FrmAppointmentList();
+            appFrm.Show();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("Update Tbl_Appointments set AppointmentDate=@a2,AppointmentHour=@a3,AppointmentBranch=@a4,AppointmentDoctor=@a5,AppointmentStatus=@a6,PatientTC=@a7 where AppointmentId=@a1", connect.connection());
+            command.Parameters.AddWithValue("@a1", Convert.ToInt32(txtId.Text));
+            command.Parameters.AddWithValue("@a2", mskDate.Text);
+            command.Parameters.AddWithValue("@a3", mskHour.Text);
+            command.Parameters.AddWithValue("@a4", cmbBranch.Text);
+            command.Parameters.AddWithValue("@a5", cmbDoctor.Text);
+            command.Parameters.AddWithValue("@a6", chkStatus.Checked ? true : false);
+            command.Parameters.AddWithValue("@a7", mskPatientTC.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Selected appointment is updated", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connect.connection().Close();
+        }
+
+        private void btnAnnouncements_Click(object sender, EventArgs e)
+        {
+            FrmAnnouncements frm = new FrmAnnouncements();
+            frm.Show();
+        }
     }
 }

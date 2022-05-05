@@ -29,6 +29,7 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAssistantDetail));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNameSurname = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,6 +62,7 @@ namespace WFA_HospitalAutomation
             this.btnList = new System.Windows.Forms.Button();
             this.btnBranchPanel = new System.Windows.Forms.Button();
             this.btnDoctorPanel = new System.Windows.Forms.Button();
+            this.btnAnnouncements = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -181,6 +183,7 @@ namespace WFA_HospitalAutomation
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -353,6 +356,7 @@ namespace WFA_HospitalAutomation
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnAnnouncements);
             this.groupBox6.Controls.Add(this.btnList);
             this.groupBox6.Controls.Add(this.btnBranchPanel);
             this.groupBox6.Controls.Add(this.btnDoctorPanel);
@@ -365,18 +369,19 @@ namespace WFA_HospitalAutomation
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(520, 59);
+            this.btnList.Location = new System.Drawing.Point(354, 59);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(227, 54);
+            this.btnList.Size = new System.Drawing.Size(200, 54);
             this.btnList.TabIndex = 0;
             this.btnList.Text = "Appointment List";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnBranchPanel
             // 
-            this.btnBranchPanel.Location = new System.Drawing.Point(271, 59);
+            this.btnBranchPanel.Location = new System.Drawing.Point(180, 59);
             this.btnBranchPanel.Name = "btnBranchPanel";
-            this.btnBranchPanel.Size = new System.Drawing.Size(227, 54);
+            this.btnBranchPanel.Size = new System.Drawing.Size(159, 54);
             this.btnBranchPanel.TabIndex = 0;
             this.btnBranchPanel.Text = "Branch Panel";
             this.btnBranchPanel.UseVisualStyleBackColor = true;
@@ -384,18 +389,29 @@ namespace WFA_HospitalAutomation
             // 
             // btnDoctorPanel
             // 
-            this.btnDoctorPanel.Location = new System.Drawing.Point(15, 59);
+            this.btnDoctorPanel.Location = new System.Drawing.Point(6, 59);
             this.btnDoctorPanel.Name = "btnDoctorPanel";
-            this.btnDoctorPanel.Size = new System.Drawing.Size(227, 54);
+            this.btnDoctorPanel.Size = new System.Drawing.Size(161, 54);
             this.btnDoctorPanel.TabIndex = 0;
             this.btnDoctorPanel.Text = "Doctor Panel";
             this.btnDoctorPanel.UseVisualStyleBackColor = true;
             this.btnDoctorPanel.Click += new System.EventHandler(this.btnDoctorPanel_Click);
             // 
+            // btnAnnouncements
+            // 
+            this.btnAnnouncements.Location = new System.Drawing.Point(560, 59);
+            this.btnAnnouncements.Name = "btnAnnouncements";
+            this.btnAnnouncements.Size = new System.Drawing.Size(190, 54);
+            this.btnAnnouncements.TabIndex = 1;
+            this.btnAnnouncements.Text = "Announcements";
+            this.btnAnnouncements.UseVisualStyleBackColor = true;
+            this.btnAnnouncements.Click += new System.EventHandler(this.btnAnnouncements_Click);
+            // 
             // FrmAssistantDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1454, 838);
             this.Controls.Add(this.groupBox6);
@@ -405,9 +421,11 @@ namespace WFA_HospitalAutomation
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmAssistantDetail";
-            this.Text = "FrmAssistantDetail";
+            this.Text = "Assistant Detail";
             this.Load += new System.EventHandler(this.FrmAssistantDetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -457,5 +475,6 @@ namespace WFA_HospitalAutomation
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnBranchPanel;
         private System.Windows.Forms.Button btnDoctorPanel;
+        private System.Windows.Forms.Button btnAnnouncements;
     }
 }

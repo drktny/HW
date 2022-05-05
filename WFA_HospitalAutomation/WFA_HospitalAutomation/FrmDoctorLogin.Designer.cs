@@ -29,8 +29,8 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoctorLogin));
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lnkSignIn = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
@@ -40,28 +40,19 @@ namespace WFA_HospitalAutomation
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(333, 300);
+            this.btnLogin.Location = new System.Drawing.Point(312, 287);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(117, 42);
             this.btnLogin.TabIndex = 12;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // lnkSignIn
-            // 
-            this.lnkSignIn.AutoSize = true;
-            this.lnkSignIn.Location = new System.Drawing.Point(468, 239);
-            this.lnkSignIn.Name = "lnkSignIn";
-            this.lnkSignIn.Size = new System.Drawing.Size(82, 29);
-            this.lnkSignIn.TabIndex = 11;
-            this.lnkSignIn.TabStop = true;
-            this.lnkSignIn.Text = "Sign in";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Constantia", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(130, 77);
+            this.label3.Location = new System.Drawing.Point(109, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(386, 49);
             this.label3.TabIndex = 10;
@@ -69,14 +60,15 @@ namespace WFA_HospitalAutomation
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(272, 239);
+            this.txtPassword.Location = new System.Drawing.Point(251, 226);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(178, 36);
             this.txtPassword.TabIndex = 9;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // mskTC
             // 
-            this.mskTC.Location = new System.Drawing.Point(272, 176);
+            this.mskTC.Location = new System.Drawing.Point(251, 163);
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(178, 36);
@@ -86,7 +78,7 @@ namespace WFA_HospitalAutomation
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 239);
+            this.label2.Location = new System.Drawing.Point(103, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 29);
             this.label2.TabIndex = 6;
@@ -95,7 +87,7 @@ namespace WFA_HospitalAutomation
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 179);
+            this.label1.Location = new System.Drawing.Point(139, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 29);
             this.label1.TabIndex = 7;
@@ -103,21 +95,24 @@ namespace WFA_HospitalAutomation
             // 
             // FrmDoctorLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(701, 427);
+            this.ClientSize = new System.Drawing.Size(625, 396);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lnkSignIn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.mskTC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoctorLogin";
-            this.Text = "FrmDoctorLogin";
+            this.Text = "Doctor Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +121,6 @@ namespace WFA_HospitalAutomation
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.LinkLabel lnkSignIn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.MaskedTextBox mskTC;

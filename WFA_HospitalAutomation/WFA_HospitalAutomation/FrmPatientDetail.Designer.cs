@@ -29,12 +29,14 @@ namespace WFA_HospitalAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPatientDetail));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNameSurname = new System.Windows.Forms.Label();
             this.lblTC = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.lnkEditInfo = new System.Windows.Forms.LinkLabel();
             this.btnGetAppointment = new System.Windows.Forms.Button();
             this.rchComplaint = new System.Windows.Forms.RichTextBox();
@@ -42,13 +44,12 @@ namespace WFA_HospitalAutomation
             this.label6 = new System.Windows.Forms.Label();
             this.cmbDoctor = new System.Windows.Forms.ComboBox();
             this.cmbBranch = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtAppointmentHistory = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtActiveAppointments = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -125,6 +126,14 @@ namespace WFA_HospitalAutomation
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Appointment Panel";
             // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(149, 35);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(277, 36);
+            this.txtId.TabIndex = 6;
+            // 
             // lnkEditInfo
             // 
             this.lnkEditInfo.AutoSize = true;
@@ -144,6 +153,7 @@ namespace WFA_HospitalAutomation
             this.btnGetAppointment.TabIndex = 2;
             this.btnGetAppointment.Text = "Make an Appointment";
             this.btnGetAppointment.UseVisualStyleBackColor = true;
+            this.btnGetAppointment.Click += new System.EventHandler(this.btnGetAppointment_Click);
             // 
             // rchComplaint
             // 
@@ -188,6 +198,15 @@ namespace WFA_HospitalAutomation
             this.cmbBranch.Size = new System.Drawing.Size(277, 36);
             this.cmbBranch.TabIndex = 3;
             this.cmbBranch.SelectedIndexChanged += new System.EventHandler(this.cmbBranch_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(105, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Id:";
             // 
             // label5
             // 
@@ -239,27 +258,13 @@ namespace WFA_HospitalAutomation
             this.dtActiveAppointments.RowTemplate.Height = 24;
             this.dtActiveAppointments.Size = new System.Drawing.Size(719, 267);
             this.dtActiveAppointments.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Id:";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(149, 35);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(277, 36);
-            this.txtId.TabIndex = 6;
+            this.dtActiveAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtActiveAppointments_CellClick);
             // 
             // FrmPatientDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1210, 705);
             this.Controls.Add(this.groupBox4);
@@ -267,9 +272,11 @@ namespace WFA_HospitalAutomation
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmPatientDetail";
-            this.Text = "PatientDetail";
+            this.Text = "Patient Detail";
             this.Load += new System.EventHandler(this.FrmPatientDetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
